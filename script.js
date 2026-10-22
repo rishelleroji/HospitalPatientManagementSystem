@@ -40,7 +40,7 @@ class PriorityQueue {
 const regularQueue = [];
 const emergencyQueue = new PriorityQueue(compareEmergency);
 const ids = new Set();
-const doctors = { regular: { name: "Dr. Meera Nair", treated: 0 }, emergency: { name: "Dr. Arjun Menon", treated: 0 } };
+const doctors = { regular: { name: "Dr. Gregory House", treated: 0 }, emergency: { name: "Dr. John H. Watson", treated: 0 } };
 const logEntries = [];
 let nextArrival = 1, type = "regular", severity = "Critical", lastCalled = "None yet";
 
