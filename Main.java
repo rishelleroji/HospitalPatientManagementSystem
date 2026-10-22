@@ -13,8 +13,8 @@ public class Main {
     private static HospitalQueueManager manager;
 
     public static void main(String[] args) {
-        Doctor generalDoctor = new Doctor("Dr. Meera Nair", "General Physician");
-        Doctor emergencyDoctor = new Doctor("Dr. Arjun Menon", "Emergency Medicine");
+        Doctor generalDoctor = new Doctor("Dr. Gregory House", "General Physician");
+        Doctor emergencyDoctor = new Doctor("Dr. John H. Watson", "Emergency Medicine");
         manager = new HospitalQueueManager(generalDoctor, emergencyDoctor);
 
         System.out.println("==========================================");
