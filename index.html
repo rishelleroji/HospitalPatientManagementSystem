@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CareQueue | Hospital Patient Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="index.html"><span>✚</span> CareQueue</a>
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="#queues">The queues</a>
+      <a class="btn" href="dashboard.html">Open dashboard</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Data Structures mini project</p>
+      <h1>Every patient. <em>In the right order.</em></h1>
+      <p>A hospital waiting room run by two queues: first come, first served for regular patients, and a priority queue so emergencies are never kept waiting.</p>
+      <a class="btn big" href="dashboard.html">Try the live demo →</a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="art-row Critical"><b>Critical</b><i>Sam</i><i>Rahul</i></div>
+      <div class="art-row Serious"><b>Serious</b><i>Neha</i></div>
+      <div class="art-row Moderate"><b>Moderate</b><i>Mona</i></div>
+      <p>Next up: Sam</p>
+    </div>
+  </header>
+
+  <section class="strip">
+    <div><b>2</b><span>Data structures</span></div>
+    <div><b>3</b><span>Severity levels</span></div>
+    <div><b>1</b><span>Custom comparator</span></div>
+    <div><b>0</b><span>Duplicate IDs allowed</span></div>
+  </section>
+
+  <section id="how" class="section">
+    <p class="eyebrow">How it works</p>
+    <h2>Three steps from waiting room to treatment</h2>
+    <div class="steps">
+      <div class="step"><span>01</span><h3>Register</h3><p>Enter a patient's ID, name, age and illness. Emergency patients also get a severity: Critical, Serious or Moderate.</p></div>
+      <div class="step"><span>02</span><h3>Queue</h3><p>Regular patients join the back of a Queue. Emergency patients are placed by a PriorityQueue using a custom comparator.</p></div>
+      <div class="step"><span>03</span><h3>Call</h3><p>The doctor calls the front of the regular queue, or the most urgent emergency, and the patient leaves the queue.</p></div>
+    </div>
+  </section>
+
+  <section id="queues" class="section alt">
+    <p class="eyebrow">The queues</p>
+    <h2>Two structures, two rules</h2>
+    <div class="two">
+      <div class="panel"><h3>Queue (FIFO)</h3><p>Uses <code>add()</code> at the rear and <code>poll()</code> from the front, so the patient who arrived first is seen first.</p></div>
+      <div class="panel"><h3>PriorityQueue</h3><p>Smaller priority number is more urgent: Critical 1, Serious 2, Moderate 3. If severity is equal, the earlier arrival goes first.</p></div>
+    </div>
+    <p class="note">The heap inside a PriorityQueue is only partly sorted, so only the next patient is guaranteed to be correct. The dashboard shows both views.</p>
+  </section>
+
+  <section class="cta">
+    <h2>See it in action</h2>
+    <p>Load sample patients and call them in.</p>
+    <a class="btn big" href="dashboard.html">Open dashboard</a>
+  </section>
+
+  <footer>
+    <b>CareQueue</b>
+    <p>Built by Rishelle Roji · Amal Jyothi College of Engineering · Data Structures Mini Project 2026</p>
+    <a href="https://github.com/rishelle-roji/HospitalPatientManagementSystem/tree/main/src" target="_blank" rel="noopener">View the Java source code</a>
+  </footer>
+</body>
+</html>
